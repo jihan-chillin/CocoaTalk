@@ -1,47 +1,30 @@
-// 1. string, number
-const a = 5;
-const b = 2;
-let name = "jihan";
+// function 
+function sayHello(name, age){
+    console.log("Hello my nam is "+name+" and i'm "+age);
+}
 
-console.log(a+b);
-console.log(a*b);
-console.log(a/b);
-console.log("hi "+name);
+sayHello("jihan", 20);
+sayHello("starbucks", 10);
+sayHello("americano", 30);
 
-name = "kojub";
-console.log("what up? "+name);
+function plus(firstNum,secondNum){
+    console.log(firstNum + secondNum);
+}
 
-// 2. boolean
-const amIFat = false;
-console.log(amIFat);
+function divide(a, b){
+    console.log(a/b);
+}
 
-// 3. Arrays
-const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
-console.log(daysOfWeek);
-// Get Item from Array
-console.log(daysOfWeek[0]);
-// Add one more dat to the array
-daysOfWeek.push("sun");
-console.log(daysOfWeek);
+plus(8, 60);
+divide(60, 12);
 
-const toBuy = ["potato", "tomato"];
-toBuy.push("pizza");
-console.log(toBuy[2]);
-
-// 4. Object
-const playerName = "jihan";
-const playerPoints = 121212;
-const playerCute = true;
-const playerFat = "little bit";
-
+// object + function
 const player = {
-    name : "jihan",
-    points : 10, 
-    cute : true,
-    fat : "little bit"
+    name : "jihan", 
+    sayHello : function(otherPersonsName){
+        console.log("hello! "+otherPersonsName);
+    }
 }
 
 console.log(player.name);
-console.log(player["points"]);
-player.lastName = "kim";
-console.log(player);
+player.sayHello("buya");
