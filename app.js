@@ -1,19 +1,47 @@
-// Document Object
-console.dir(document);
-console.log(document.title);
+// Events
+const h1 = document.querySelector("div.hello:first-child h1");
 
-document.title="jihan's blog";
+console.log(h1);
 
-// html in JS
-const title = document.getElementById("title");
-console.log(title);
-title.innerText ="Got you!"
+function handleTitleClick(){
+    h1.style.color = "blue";
+}
 
-console.log(title.className);
+function handleMouseEnter(){
+    console.log("mouse is here");
+}
 
-// Searching For Elements
-const hi = document.getElementsByClassName("hi");
-console.log(hi);
+function handleMouseLeave(){
+    h1.innerText = "Mouse is gone"
+}
 
-const hiTitle = document.querySelector(".hi h1");
-console.log(hiTitle);
+function handleWindowResize(){
+    document.body.style.backgroundColor = "tomato"
+}
+
+function handleWindowCopy(){
+    alert("copier");
+}
+
+function handleWindowOffline(){
+    alert('There is no WIFI');
+}
+
+function handleWindowOnline(){
+    alert('ALL GOOOOD');
+}
+
+// title.addEventListener("click", handleTitleClick());
+// title.addEventListener("mouseenter", handleMouseEnter());
+// title.addEventListener("mouseleave", handleMouseLeave());
+
+// More Events
+h1.onclick = handleTitleClick;
+h1.onmouseenter = handleMouseEnter;
+h1.onmouseleave = handleMouseLeave;
+
+window.addEventListener("resize", handleWindowResize());
+window.addEventListener("copy", handleWindowCopy());
+
+window.addEventListener("offline", handleWindowOffline());
+window.addEventListener("online", handleWindowOnline());
