@@ -1,36 +1,25 @@
-// returns
-const calculator = {
-    plus : function(a,b){
-        return(a+b);
-    },
-    minus : function(a,b){
-        return(a-b);
-    },
-    multi : function(a,b){
-        return(a*b);
-    },
-    divide : function(a,b){
-        return(a/b);
-    },
-    power : function(a,b){
-        return(a**b);
-    }
+// conditionals
+const age = parseInt(prompt("How old are you?")); 
+console.log(typeof age); // 모두 string값으로 나옴
+
+// "15" ==> 15
+console.log(typeof "15", typeof parseInt("15"));
+console.log(isNaN(age));
+
+if(isNaN(age)){
+    console.log("please write a number");
+}
+else if(age <18){
+    console.log("You're too young to buy this");
+}
+else{
+    console.log("You can drink");
 }
 
-calculator.plus(10,5);
-calculator.minus(10,2);
-calculator.multi(10,2);
-calculator.divide(10,2);
-calculator.power(10,2);
+true || true === true
+false || true === true;
+false || false === false;
 
-const plusResult = calculator.plus(2,3);
-console.log("더하기 값 : "+plusResult);
-
-
-const age = 96;
-function calculateKrAge(ageOfForeigner){
-    return ageOfForeigner + 2;
-}
-
-const krAge = calculateKrAge(age);
-console.log(krAge);
+true && true === true;
+true && false === false;
+false && false === false;
