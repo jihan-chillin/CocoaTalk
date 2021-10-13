@@ -1,25 +1,19 @@
-// conditionals
-const age = parseInt(prompt("How old are you?")); 
-console.log(typeof age); // 모두 string값으로 나옴
+// Document Object
+console.dir(document);
+console.log(document.title);
 
-// "15" ==> 15
-console.log(typeof "15", typeof parseInt("15"));
-console.log(isNaN(age));
+document.title="jihan's blog";
 
-if(isNaN(age)){
-    console.log("please write a number");
-}
-else if(age <18){
-    console.log("You're too young to buy this");
-}
-else{
-    console.log("You can drink");
-}
+// html in JS
+const title = document.getElementById("title");
+console.log(title);
+title.innerText ="Got you!"
 
-true || true === true
-false || true === true;
-false || false === false;
+console.log(title.className);
 
-true && true === true;
-true && false === false;
-false && false === false;
+// Searching For Elements
+const hi = document.getElementsByClassName("hi");
+console.log(hi);
+
+const hiTitle = document.querySelector(".hi h1");
+console.log(hiTitle);
