@@ -1,44 +1,17 @@
-// Events
-// const h1 = document.querySelector("div.hello:first-child h1");
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+// const loginButton = document.querySelector("#login-form button");
 
-// function handleTitleClick(){
-//     const currentColor = h1.style.color;
-//     let newColor ;
-//     if(currentColor === "blue"){
-//         newColor = "tomato";
-//     }
-//     else {
-//         newColor = "blue";
-//     }
-//     h1.style.color = newColor;
-// }
-
-// function handleMouseEnter(){
-//     console.log("mouse is here");
-// }
-
-// h1.addEventListener("click", handleTitleClick);
-
-
-// Css in javscript 
-// const h1 = document.querySelector("div.hello:first-child h1");
-
-// function handleTitleClick() {
-//     const clickedClass = "clicked"
-//     if(h1.classList.contains(clickedClass)){
-//         h1.classList.remove(clickedClass);
-//     }else{
-//         h1.classList.add(clickedClass);
-//     }
-// }
-
-// h1.addEventListener("click", handleTitleClick);
-
-// Css in javascript part 2 => toggle
-const h1 = document.querySelector("div.hello:first-child h1");
-
-function handleTitleClick() {
-    h1.classList.toggle("clicked");
+function onLoginSubmit(event){
+    // ▼ default behavior를 막는 것 (submit으로 인해 새로고침 되는 이벤트)
+    event.preventDefault();
+    // const username = loginInput.value;
+    console.log(loginInput.value);
+    // if(username === ""){
+    //     alert("Please write your name");
+    // }else if (username.length > 15){
+    //     alert("Your name is too long");
+    // }
 }
 
-h1.addEventListener("click", handleTitleClick);
+loginForm.addEventListener("submit", onLoginSubmit)
